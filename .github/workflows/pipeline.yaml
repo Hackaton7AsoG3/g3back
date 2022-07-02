@@ -56,7 +56,7 @@ jobs:
           ARTIFACT_REGISTRY: ${{ secrets.ARTIFACT_REGISTRY }}
         uses: 'google-github-actions/deploy-cloudrun@v0'
         with:
-          image_url: ${{ secrets.ARTIFACT_REGISTRY }}/g3back:latest
+          image: ${{ secrets.ARTIFACT_REGISTRY }}/g3back:latest
           service: cloudrun-back
 
       - name: Prod Test
