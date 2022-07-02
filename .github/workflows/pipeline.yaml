@@ -57,6 +57,7 @@ jobs:
         uses: 'google-github-actions/deploy-cloudrun@v0'
         with:
           image_url: ${{ secrets.ARTIFACT_REGISTRY }}/g3back:latest
+          service: g3back
 
       - name: Prod Test
         run: 'curl "${{ steps.deploy.outputs.url }}"'
